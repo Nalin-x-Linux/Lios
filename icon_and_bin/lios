@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+from lios.lios import *
+if __name__ == '__main__':
+	linux_intelligent_ocr_solution()
+
