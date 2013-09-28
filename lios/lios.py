@@ -65,7 +65,7 @@ except:
 	
 from espeak import espeak
 class linux_intelligent_ocr_solution(tools.lios_tools,scan_image.scan_image,preferences.lios_preferences,image_manipulation.image_manipulation):
-	def __init__(self):
+	def __init__(self,filename=None):
 		self.guibuilder = gtk.Builder()
 		self.guibuilder.add_from_file("/usr/share/lios/Gui/main.glade")
 		self.window = self.guibuilder.get_object("window")
@@ -160,15 +160,19 @@ class linux_intelligent_ocr_solution(tools.lios_tools,scan_image.scan_image,pref
 		#Font 
 		pangoFont = pango.FontDescription(self.font)
 		self.textview.modify_font(pangoFont)
-		
-		#Opening Recent Document
-		try:
-			recent_open = open("%srecent"%directory,'r')
-		except IOError:
-			pass
+
+		if (filename):
+			 self.textbuffer.set_text(open(filename,"r").read())
+			 self.save_file_name = filename
 		else:
-			recent_text = recent_open.read()
-			self.textbuffer.set_text(recent_text)
+			#Opening Recent Document
+			try:
+				recent_open = open("%srecent"%directory,'r')
+			except IOError:
+				pass
+			else:
+				recent_text = recent_open.read()
+				self.textbuffer.set_text(recent_text)
 		
 		#Color
 		self.highlight_tag = self.textbuffer.create_tag('Reading')

@@ -2,5 +2,10 @@
 
 from lios.lios import *
 if __name__ == '__main__':
-	linux_intelligent_ocr_solution()
+	if (len(sys.argv) == 2):
+		linux_intelligent_ocr_solution(sys.argv[1])
+	else:
+		linux_intelligent_ocr_solution()
+	
+	
 
