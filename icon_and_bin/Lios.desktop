@@ -1,4 +1,3 @@
-
 [Desktop Entry]
 Version=1.0
 Type=Application
@@ -10,3 +9,4 @@ Icon=/usr/share/lios/Gui/lios
 Categories=Graphics;
 Name[en_IN]=Lios
 Comment[en_IN]=Scan & Read
+MimeType=text/plain;
