@@ -407,6 +407,7 @@ class linux_intelligent_ocr_solution(tools.lios_tools,scan_image.scan_image,pref
 		else:
 			espeak.cancel()
 			self.notify("Please close all processes before Quitting",True,None,True)
+			return True
 		
 
 	def new(self,wedget,data=None):
