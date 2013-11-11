@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="2.24"/>
-  <!-- interface-naming-policy project-wide -->
+  <!-- interface-requires gtk+ 3.0 -->
   <object class="GtkWindow" id="window">
     <property name="width_request">320</property>
     <property name="height_request">330</property>
@@ -43,8 +42,6 @@
             <property name="invisible_char">•</property>
             <property name="primary_icon_activatable">False</property>
             <property name="secondary_icon_activatable">False</property>
-            <property name="primary_icon_sensitive">True</property>
-            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -59,8 +56,6 @@
             <property name="invisible_char">•</property>
             <property name="primary_icon_activatable">False</property>
             <property name="secondary_icon_activatable">False</property>
-            <property name="primary_icon_sensitive">True</property>
-            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -73,6 +68,7 @@
         <child>
           <object class="GtkButton" id="Find_and_Replace_Say_Context">
             <property name="label" translatable="yes">Say-Context</property>
+            <property name="use_action_appearance">False</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
@@ -90,6 +86,7 @@
         <child>
           <object class="GtkButton" id="Find_and_Replace_Find">
             <property name="label" translatable="yes">Find</property>
+            <property name="use_action_appearance">False</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
@@ -108,6 +105,7 @@
         <child>
           <object class="GtkButton" id="Find_and_Replace_Replace">
             <property name="label" translatable="yes">Replace</property>
+            <property name="use_action_appearance">False</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
@@ -125,6 +123,7 @@
         <child>
           <object class="GtkButton" id="Find_and_Replace_Close">
             <property name="label" translatable="yes">Close</property>
+            <property name="use_action_appearance">False</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
@@ -141,6 +140,7 @@
         <child>
           <object class="GtkButton" id="Find_and_Replace_Replace_All">
             <property name="label" translatable="yes">Replace-All</property>
+            <property name="use_action_appearance">False</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
