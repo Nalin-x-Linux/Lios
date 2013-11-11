@@ -1,11 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="2.24"/>
-  <!-- interface-naming-policy project-wide -->
+  <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkImage" id="image17">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-jump-to</property>
+  </object>
+  <object class="GtkImage" id="image18">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-jump-to</property>
+  </object>
+  <object class="GtkImage" id="image19">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">object-rotate-left</property>
+  </object>
   <object class="GtkAdjustment" id="adjustment1">
     <property name="upper">100</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
+  </object>
+  <object class="GtkImage" id="image20">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">object-rotate-right</property>
+  </object>
+  <object class="GtkImage" id="image21">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-save</property>
+  </object>
+  <object class="GtkImage" id="image22">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">scanner</property>
+  </object>
+  <object class="GtkImage" id="image23">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-dialog-info</property>
+  </object>
+  <object class="GtkImage" id="image24">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-justify-left</property>
   </object>
   <object class="GtkImage" id="image10">
     <property name="visible">True</property>
@@ -41,46 +80,6 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="stock">gtk-find</property>
-  </object>
-  <object class="GtkImage" id="image17">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-jump-to</property>
-  </object>
-  <object class="GtkImage" id="image18">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-jump-to</property>
-  </object>
-  <object class="GtkImage" id="image19">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="icon_name">object-rotate-left</property>
-  </object>
-  <object class="GtkImage" id="image20">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="icon_name">object-rotate-right</property>
-  </object>
-  <object class="GtkImage" id="image21">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-save</property>
-  </object>
-  <object class="GtkImage" id="image22">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="icon_name">scanner</property>
-  </object>
-  <object class="GtkImage" id="image23">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-dialog-info</property>
-  </object>
-  <object class="GtkImage" id="image24">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-justify-left</property>
   </object>
   <object class="GtkImage" id="image25">
     <property name="visible">True</property>
@@ -183,6 +182,16 @@
     <property name="tooltip_text" translatable="yes">Play or Stop TTS</property>
     <property name="pixbuf">play</property>
   </object>
+  <object class="GtkListStore" id="liststore1">
+    <columns>
+      <!-- column-name Hello1 -->
+      <column type="Hello"/>
+      <!-- column-name fdf1 -->
+      <column type="fdf"/>
+      <!-- column-name fdf2 -->
+      <column type="fdf"/>
+    </columns>
+  </object>
   <object class="GtkTextBuffer" id="textbuffer"/>
   <object class="GtkWindow" id="window">
     <property name="can_focus">False</property>
@@ -204,9 +213,9 @@
             <property name="can_focus">False</property>
             <child>
               <object class="GtkMenuItem" id="File">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="label" translatable="yes">_File</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
@@ -216,9 +225,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="new ">
                         <property name="label">gtk-new</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <accelerator key="n" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -228,9 +237,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="open ">
                         <property name="label">gtk-open</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <accelerator key="o" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -240,9 +249,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="save ">
                         <property name="label">gtk-save</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <accelerator key="s" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -252,9 +261,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="ui_image_save">
                         <property name="label">Save-current-image</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image21</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="ui_image_save" swapped="no"/>
@@ -263,9 +272,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="save_as">
                         <property name="label">gtk-save-as</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <accelerator key="s" signal="activate" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
@@ -275,9 +284,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Append-Save">
                         <property name="label" translatable="yes">Append-Save</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image38</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="append_save" swapped="no"/>
@@ -285,17 +294,17 @@
                     </child>
                     <child>
                       <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkImageMenuItem" id="qui">
                         <property name="label">gtk-quit</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <accelerator key="q" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -308,9 +317,9 @@
             </child>
             <child>
               <object class="GtkMenuItem" id="Edit">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="label" translatable="yes">_Edit</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
@@ -320,9 +329,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Cut">
                         <property name="label">gtk-cut</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="cut" swapped="no"/>
@@ -331,9 +340,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="copy">
                         <property name="label">gtk-copy</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="copy" swapped="no"/>
@@ -342,9 +351,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="paste">
                         <property name="label">gtk-paste</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="paste" swapped="no"/>
@@ -353,9 +362,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Delete">
                         <property name="label">gtk-delete</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="delete" swapped="no"/>
@@ -364,9 +373,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Punch">
                         <property name="label" translatable="yes">Punch</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image14</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="punch" swapped="no"/>
@@ -375,9 +384,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Append-File">
                         <property name="label" translatable="yes">Append</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image15</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="append" swapped="no"/>
@@ -386,9 +395,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Find">
                         <property name="label" translatable="yes">Find</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image16</property>
                         <property name="use_stock">False</property>
                         <accelerator key="f" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -398,9 +407,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Find &amp; Replace">
                         <property name="label">gtk-find-and-replace</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <accelerator key="r" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -410,9 +419,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Go-To-Line">
                         <property name="label" translatable="yes">Go-To-Line</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image17</property>
                         <property name="use_stock">False</property>
                         <accelerator key="l" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -422,9 +431,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Go-To-Page">
                         <property name="label" translatable="yes">Go-To-Page</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image18</property>
                         <property name="use_stock">False</property>
                         <accelerator key="g" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -434,9 +443,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Rotate-Left">
                         <property name="label" translatable="yes">Rotate-Left</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image19</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="rotate_left" swapped="no"/>
@@ -445,9 +454,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Rotate-Right">
                         <property name="label" translatable="yes">Rotate-Right</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image20</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="rotate_right" swapped="no"/>
@@ -459,9 +468,9 @@
             </child>
             <child>
               <object class="GtkMenuItem" id="Scan">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="label" translatable="yes">_Scan</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
@@ -471,9 +480,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="scan_to_ui">
                         <property name="label" translatable="yes">Scan-To-UI</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image36</property>
                         <property name="use_stock">False</property>
                         <accelerator key="F6" signal="activate"/>
@@ -482,9 +491,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="scan_and_ocr">
                         <property name="label" translatable="yes">Scan &amp; Ocr</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image22</property>
                         <property name="use_stock">False</property>
                         <accelerator key="F9" signal="activate"/>
@@ -493,9 +502,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="scan_and_ocr_repeatedly">
                         <property name="label" translatable="yes">Scan &amp; OCR-Repeatedly</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image37</property>
                         <property name="use_stock">False</property>
                         <accelerator key="F9" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -504,9 +513,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="cam_scan">
                         <property name="label" translatable="yes">Cam-Scan</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image35</property>
                         <property name="use_stock">False</property>
                       </object>
@@ -514,9 +523,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Stop-All-Process">
                         <property name="label" translatable="yes">Stop-All-Process</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image30</property>
                         <property name="use_stock">False</property>
                         <accelerator key="F4" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -529,9 +538,9 @@
             </child>
             <child>
               <object class="GtkMenuItem" id="OCR">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="label" translatable="yes">_Ocr</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
@@ -541,9 +550,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="ocr_ui_image">
                         <property name="label" translatable="yes">OCR-Current-Image</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image34</property>
                         <property name="use_stock">False</property>
                         <accelerator key="F3" signal="activate"/>
@@ -552,9 +561,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="ocr_image">
                         <property name="label" translatable="yes">OCR-Image</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image33</property>
                         <property name="use_stock">False</property>
                       </object>
@@ -562,9 +571,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="ocr_pdf">
                         <property name="label" translatable="yes">OCR-Pdf</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image32</property>
                         <property name="use_stock">False</property>
                       </object>
@@ -572,9 +581,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="ocr_folder">
                         <property name="label" translatable="yes">OCR-Folder</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image31</property>
                         <property name="use_stock">False</property>
                       </object>
@@ -582,9 +591,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Stop-All-Process-">
                         <property name="label" translatable="yes">Stop-All-Process</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image29</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="stop" swapped="no"/>
@@ -596,9 +605,9 @@
             </child>
             <child>
               <object class="GtkMenuItem" id="Tools">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="label" translatable="yes">_Tools</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
@@ -608,9 +617,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Artha">
                         <property name="label" translatable="yes">Artha</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image25</property>
                         <property name="use_stock">False</property>
                         <accelerator key="w" signal="activate" modifiers="GDK_CONTROL_MASK | GDK_MOD1_MASK"/>
@@ -620,9 +629,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Spell-Checker">
                         <property name="label">gtk-spell-check</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <accelerator key="F7" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -632,9 +641,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Deskew-Image">
                         <property name="label" translatable="yes">Deskew-Image</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image41</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="on_Deskew_Image_activate" swapped="no"/>
@@ -643,9 +652,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Read_Stop">
                         <property name="label" translatable="yes">Read/Stop</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image40</property>
                         <property name="use_stock">False</property>
                         <accelerator key="F5" signal="activate"/>
@@ -655,9 +664,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="optimise_brightness">
                         <property name="label" translatable="yes">Optimise-Brightness</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image27</property>
                         <property name="use_stock">False</property>
                       </object>
@@ -665,9 +674,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Audio-Converter">
                         <property name="label" translatable="yes">Audio-Converter</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image28</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="audio_converter" swapped="no"/>
@@ -676,9 +685,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Show/Hide-Image">
                         <property name="label" translatable="yes">Show/Hide-Image</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image26</property>
                         <property name="use_stock">False</property>
                         <accelerator key="h" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -691,9 +700,9 @@
             </child>
             <child>
               <object class="GtkMenuItem" id="Preferences">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="label" translatable="yes">_Preferences</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
@@ -708,9 +717,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="General_Preferences">
                         <property name="label">gtk-preferences</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <accelerator key="p" signal="activate" modifiers="GDK_CONTROL_MASK"/>
@@ -719,9 +728,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Preferences_Recognition">
                         <property name="label" translatable="yes">Recognition</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image11</property>
                         <property name="use_stock">False</property>
                       </object>
@@ -729,9 +738,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Preferences_Scanning">
                         <property name="label" translatable="yes">Scanning</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image12</property>
                         <property name="use_stock">False</property>
                       </object>
@@ -739,9 +748,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Preferences_CamaraWebcam">
                         <property name="label" translatable="yes">Camera &amp; Webcam</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image13</property>
                         <property name="use_stock">False</property>
                       </object>
@@ -749,9 +758,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Save_preferences">
                         <property name="label" translatable="yes">Save-Preferences</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image8</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="on_Save_preferences_activate" swapped="no"/>
@@ -760,9 +769,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Load_preferences">
                         <property name="label" translatable="yes">Load-preferences</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image9</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="on_Load_preferences_activate" swapped="no"/>
@@ -771,9 +780,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Restore_preferences">
                         <property name="label" translatable="yes">Restore-preferences</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image10</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="on_Restore_preferences_activate" swapped="no"/>
@@ -785,9 +794,9 @@
             </child>
             <child>
               <object class="GtkMenuItem" id="Help">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
                 <property name="label" translatable="yes">_Help</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
@@ -797,9 +806,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="About">
                         <property name="label">gtk-about</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <signal name="activate" handler="about" swapped="no"/>
@@ -808,9 +817,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="open_readme">
                         <property name="label" translatable="yes">Open-Readme</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image23</property>
                         <property name="use_stock">False</property>
                         <signal name="activate" handler="open_read_me" swapped="no"/>
@@ -819,9 +828,9 @@
                     <child>
                       <object class="GtkImageMenuItem" id="Feedback">
                         <property name="label" translatable="yes">Feedback</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_action_appearance">False</property>
                         <property name="image">image24</property>
                         <property name="use_stock">False</property>
                         <accelerator key="f" signal="activate" modifiers="GDK_CONTROL_MASK | GDK_MOD1_MASK"/>
@@ -845,6 +854,7 @@
             <property name="icon_size">5</property>
             <child>
               <object class="GtkToolButton" id="new">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Start a new file</property>
@@ -861,6 +871,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="save">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Save file</property>
@@ -877,6 +888,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="open">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Open text or image file</property>
@@ -893,6 +905,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="toolbutton4">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Go to line</property>
@@ -909,6 +922,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="Punc">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Punch File</property>
@@ -925,6 +939,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="Spell-Check">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Check spelling</property>
@@ -941,6 +956,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="toolbutton7">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Find</property>
@@ -957,6 +973,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="toolbutton8">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Preferences</property>
@@ -973,6 +990,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="toolbutton9">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Stop-all-process</property>
@@ -989,6 +1007,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="Abou">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">About-Lios</property>
@@ -1005,6 +1024,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="Hide">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_markup">Show/Hide-Image</property>
@@ -1022,6 +1042,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="Read_button">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="use_action_appearance">False</property>
@@ -1037,6 +1058,7 @@
             </child>
             <child>
               <object class="GtkToolButton" id="quit">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Quit From Lios</property>
@@ -1074,8 +1096,6 @@
                 <property name="width_request">840</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">automatic</property>
-                <property name="vscrollbar_policy">automatic</property>
                 <child>
                   <object class="GtkTextView" id="textview">
                     <property name="visible">True</property>
@@ -1096,360 +1116,369 @@
               </packing>
             </child>
             <child>
-              <object class="GtkFrame" id="frame">
+              <object class="GtkPaned" id="paned1">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label_xalign">0</property>
-                <property name="shadow_type">none</property>
+                <property name="can_focus">True</property>
                 <child>
-                  <object class="GtkAlignment" id="alignment1">
+                  <object class="GtkFrame" id="frame">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="left_padding">12</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">none</property>
                     <child>
-                      <object class="GtkVPaned" id="vpaned1">
+                      <object class="GtkAlignment" id="alignment1">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkHBox" id="hbox1">
+                          <object class="GtkVPaned" id="vpaned1">
                             <property name="visible">True</property>
-                            <property name="can_focus">False</property>
+                            <property name="can_focus">True</property>
                             <child>
-                              <object class="GtkButton" id="scan_to_ui_button">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <child internal-child="accessible">
-                                  <object class="AtkObject" id="scan_to_ui_button-atkobject">
-                                    <property name="AtkObject::accessible-name" translatable="yes">Scan to User Interface</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkImage" id="image6">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="icon_name">scanner</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <signal name="clicked" handler="zoom_in" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="image1">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="tooltip_text" translatable="yes">Zoom image</property>
-                                    <property name="stock">gtk-zoom-in</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button2">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <signal name="clicked" handler="zoom_out" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="image2">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="stock">gtk-zoom-out</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button3">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <signal name="clicked" handler="set_image" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="image3">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="stock">gtk-zoom-fit</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">3</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button4">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <child internal-child="accessible">
-                                  <object class="AtkObject" id="button4-atkobject">
-                                    <property name="AtkObject::accessible-name" translatable="yes">Rotate Left</property>
-                                  </object>
-                                </child>
-                                <signal name="clicked" handler="rotate_left" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="image4">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="icon_name">object-rotate-left</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">4</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button5">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <child internal-child="accessible">
-                                  <object class="AtkObject" id="button5-atkobject">
-                                    <property name="AtkObject::accessible-name" translatable="yes">Rotate Right</property>
-                                  </object>
-                                </child>
-                                <signal name="clicked" handler="rotate_right" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="image5">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="icon_name">object-rotate-right</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">5</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button8">
-                                <property name="label" translatable="yes">Deskew-Image</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <signal name="clicked" handler="on_Deskew_Image_activate" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">6</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="ocr_ui_image_button">
-                                <property name="label" translatable="yes">OCR</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">7</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="ui_image_save_button">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <signal name="clicked" handler="ui_image_save" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="image7">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="stock">gtk-save</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">8</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button6">
-                                <property name="label" translatable="yes">Feedback</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <signal name="clicked" handler="feedback" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">9</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="resize">False</property>
-                            <property name="shrink">True</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkTable" id="table_image">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="n_rows">4</property>
-                            <property name="n_columns">4</property>
-                            <child>
-                              <object class="GtkHRuler" id="hruler">
+                              <object class="GtkHBox" id="hbox1">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="upper">10</property>
-                                <property name="position">5</property>
-                                <property name="max_size">10</property>
+                                <child>
+                                  <object class="GtkButton" id="scan_to_ui_button">
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <child internal-child="accessible">
+                                      <object class="AtkObject" id="scan_to_ui_button-atkobject">
+                                        <property name="AtkObject::accessible-name" translatable="yes">Scan to User Interface</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkImage" id="image6">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="icon_name">scanner</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button1">
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <signal name="clicked" handler="zoom_in" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="image1">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="tooltip_text" translatable="yes">Zoom image</property>
+                                        <property name="stock">gtk-zoom-in</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button2">
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <signal name="clicked" handler="zoom_out" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="image2">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="stock">gtk-zoom-out</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">2</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button3">
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <signal name="clicked" handler="set_image" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="image3">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="stock">gtk-zoom-fit</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">3</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button4">
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <child internal-child="accessible">
+                                      <object class="AtkObject" id="button4-atkobject">
+                                        <property name="AtkObject::accessible-name" translatable="yes">Rotate Left</property>
+                                      </object>
+                                    </child>
+                                    <signal name="clicked" handler="rotate_left" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="image4">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="icon_name">object-rotate-left</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">4</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button5">
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <child internal-child="accessible">
+                                      <object class="AtkObject" id="button5-atkobject">
+                                        <property name="AtkObject::accessible-name" translatable="yes">Rotate Right</property>
+                                      </object>
+                                    </child>
+                                    <signal name="clicked" handler="rotate_right" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="image5">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="icon_name">object-rotate-right</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">5</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button8">
+                                    <property name="label" translatable="yes">Deskew-Image</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <signal name="clicked" handler="on_Deskew_Image_activate" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">6</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="ocr_ui_image_button">
+                                    <property name="label" translatable="yes">OCR</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">7</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="ui_image_save_button">
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <signal name="clicked" handler="ui_image_save" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="image7">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="stock">gtk-save</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">8</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button6">
+                                    <property name="label" translatable="yes">Feedback</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <signal name="clicked" handler="feedback" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">9</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">4</property>
-                                <property name="x_options">GTK_FILL</property>
-                                <property name="y_options"></property>
+                                <property name="resize">False</property>
+                                <property name="shrink">True</property>
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkVRuler" id="vruler">
+                              <object class="GtkTable" id="table_image">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="upper">10</property>
-                                <property name="position">5</property>
-                                <property name="max_size">10</property>
-                              </object>
-                              <packing>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">3</property>
-                                <property name="x_options"></property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkFixed" id="fixed1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                              </object>
-                              <packing>
-                                <property name="x_options"></property>
-                                <property name="y_options"></property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button7">
-                                <property name="label" translatable="yes">Clear</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                                <signal name="clicked" handler="clear_selection" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="left_attach">3</property>
-                                <property name="right_attach">4</property>
-                                <property name="top_attach">3</property>
-                                <property name="bottom_attach">4</property>
-                                <property name="y_options"></property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkFixed" id="fixed2">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                              </object>
-                              <packing>
-                                <property name="top_attach">3</property>
-                                <property name="bottom_attach">4</property>
-                                <property name="x_options"></property>
-                                <property name="y_options"></property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkScrolledWindow" id="scrolledwindow_image">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="hscrollbar_policy">automatic</property>
-                                <property name="vscrollbar_policy">automatic</property>
+                                <property name="n_rows">4</property>
+                                <property name="n_columns">4</property>
+                                <child>
+                                  <placeholder/>
+                                </child>
+                                <child>
+                                  <placeholder/>
+                                </child>
+                                <child>
+                                  <object class="GtkFixed" id="fixed1">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                  </object>
+                                  <packing>
+                                    <property name="x_options"></property>
+                                    <property name="y_options"></property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button7">
+                                    <property name="label" translatable="yes">Clear</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <signal name="clicked" handler="clear_selection" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">3</property>
+                                    <property name="right_attach">4</property>
+                                    <property name="top_attach">3</property>
+                                    <property name="bottom_attach">4</property>
+                                    <property name="y_options"></property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkFixed" id="fixed2">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                  </object>
+                                  <packing>
+                                    <property name="top_attach">3</property>
+                                    <property name="bottom_attach">4</property>
+                                    <property name="x_options"></property>
+                                    <property name="y_options"></property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow_image">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="right_attach">4</property>
+                                    <property name="top_attach">1</property>
+                                    <property name="bottom_attach">3</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <placeholder/>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="ocr_selected_image_region_button">
+                                    <property name="label" translatable="yes">Ocr Selected Region</property>
+                                    <property name="use_action_appearance">False</property>
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="use_action_appearance">False</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="right_attach">3</property>
+                                    <property name="top_attach">3</property>
+                                    <property name="bottom_attach">4</property>
+                                    <property name="y_options"></property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <placeholder/>
+                                </child>
                                 <child>
                                   <placeholder/>
                                 </child>
                               </object>
                               <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">4</property>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">3</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="ocr_selected_image_region_button">
-                                <property name="label" translatable="yes">Ocr Selected Region</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="use_action_appearance">False</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">3</property>
-                                <property name="top_attach">3</property>
-                                <property name="bottom_attach">4</property>
-                                <property name="y_options"></property>
+                                <property name="resize">True</property>
+                                <property name="shrink">True</property>
                               </packing>
                             </child>
                           </object>
-                          <packing>
-                            <property name="resize">True</property>
-                            <property name="shrink">True</property>
-                          </packing>
                         </child>
                       </object>
                     </child>
+                    <child type="label">
+                      <object class="GtkLabel" id="label1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">&lt;b&gt;Image &lt;/b&gt;</property>
+                        <property name="use_markup">True</property>
+                      </object>
+                    </child>
                   </object>
+                  <packing>
+                    <property name="resize">True</property>
+                    <property name="shrink">True</property>
+                  </packing>
                 </child>
-                <child type="label">
-                  <object class="GtkLabel" id="label1">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;b&gt;Image &lt;/b&gt;</property>
-                    <property name="use_markup">True</property>
-                  </object>
+                <child>
+                  <placeholder/>
                 </child>
               </object>
               <packing>
@@ -1498,8 +1527,6 @@
             <property name="invisible_char">•</property>
             <property name="primary_icon_activatable">False</property>
             <property name="secondary_icon_activatable">False</property>
-            <property name="primary_icon_sensitive">True</property>
-            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">5</property>
@@ -1517,8 +1544,6 @@
             <property name="invisible_char">•</property>
             <property name="primary_icon_activatable">False</property>
             <property name="secondary_icon_activatable">False</property>
-            <property name="primary_icon_sensitive">True</property>
-            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
             <property name="left_attach">6</property>
